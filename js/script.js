@@ -1,15 +1,3 @@
-// Vue.component("header", {
-//   props: {},
-//   // template: ``,
-//   data() {
-//     return {
-//
-//     }
-//   },
-//   methods: {},
-//   computed: {},
-// })
-
 
 let app = new Vue({
     el: '#app',
