@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="app">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <a :href="header.home.link" class="header__item">{{ header.home[language] }}</a>
+            <a :href="header.about.link" class="header__item">{{ header.about[language] }}</a>
+            <a :href="header.skills.link" class="header__item">{{ header.skills[language] }}</a>
+            <a :href="header.portfolio.link" class="header__item">{{ header.portfolio[language] }}</a>
+            <a :href="header.contacts.link" class="header__item">{{ header.contacts[language] }}</a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="intro">
+          <div class="intro__container">
+            <div class="intro__content">
+              <h1 class="intro__title">{{ intro.title[language] }}</h1>
+              <div class="intro__text text">
+                <div class="text__container">
+                  <p>{{ intro.text.first[language] }}</p>
+                  <p>{{ intro.text.second[language] }}</p>
+                </div>
+              </div>
+              <div class="intro__language language">
+                <p @click="changeToRus()" class="language__item">RU</p>
+                <p class="language__item-decor">|</p>
+                <p @click="changeToEng()" class="language__item">ENG</p>
+              </div>
+            </div>
+            <div class="intro__cover">
+              <img :src="intro.cover" alt="">
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="about__container">
+            <a name="about"></a>
+            <h2 class="about__title title">{{ about.title[language] }}</h2>
+            <div class="about__text text">
+              <div class="text__container">
+                <p>{{ about.text.first[language] }}</p>
+                <p>{{ about.text.second[language] }}</p>
+                <p>{{ about.text.third[language] }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="skills">
+          <div class="skills__container">
+            <h2 class="skills__title title">{{ skills.title[language] }}</h2>
+            <p class="skills__text text">{{ skills.text[language] }}</p>
+            <div class="skills__content">
+              <div class="skills__skill skill">
+                <img :src="skills.skill1.cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.skill1.title }}</p>
+                <div class="skill__rating rating">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                </div>
+              </div>
+              <div class="skills__skill skill">
+                <img :src="skills.skill2.cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.skill2.title }}</p>
+                <div class="skill__rating rating">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                </div>
+              </div>
+              <div class="skills__skill skill">
+                <img :src="skills.skill3.cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.skill3.title }}</p>
+                <div class="skill__rating rating">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                </div>
+              </div>
+              <div class="skills__skill skill">
+                <img :src="skills.skill4.cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.skill4.title }}</p>
+                <div class="skill__rating rating">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        Footer
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
