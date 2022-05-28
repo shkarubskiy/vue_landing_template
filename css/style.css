@@ -23,6 +23,7 @@ html, body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #070707;
+  scroll-behavior: smooth;
 }
 .wrapper {
   overflow: hidden;
@@ -153,6 +154,10 @@ html, body {
 }
 .skill__title {
   text-align: center;
+  font-size: calc(14 * 100vw / 1440);
+  font-weight: bold;
+  line-height: calc(17 * 100vw / 1440);
+  color: #828282;
   width: calc(88 * 100vw / 1440);
   margin-bottom: calc(42 * 100vw / 1440);
 }
@@ -163,4 +168,66 @@ html, body {
 }
 .rating__star {
   width: calc(26 * 100vw / 1440);
+}
+
+.portfolio {
+  background: #F6F6F6;
+}
+.portfolio__container {
+  text-align: center;
+  padding: calc(110 * 100vw / 1440) calc(250 * 100vw / 1440) calc(96 * 100vw / 1440);
+  width: 100%;
+  margin: 0 auto;
+}
+.portfolio__title {
+  padding-bottom: calc(47 * 100vw / 1440);
+}
+.portfolio__card {
+  padding-bottom: calc(100 * 100vw / 1440);
+}
+.portfolio__container .portfolio__card:last-child {
+  padding-bottom: 0;
+}
+.card__cover {
+  padding-bottom: calc(45 * 100vw / 1440);
+}
+.card__link {
+  text-decoration: underline;
+  color: inherit;
+
+}
+
+.contacts__container {
+  padding: calc(114 * 100vw / 1440) calc(550 * 100vw / 1440) calc(140 * 100vw / 1440);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.contacts__title {
+  padding-bottom: calc(20 * 100vw / 1440);
+}
+.contacts__text {
+  padding: 0 calc(30 * 100vw / 1440) calc(30 * 100vw / 1440);
+}
+.contacts__button {
+  height: calc(42 * 100vw / 1440);
+  width: 100%;
+  border-radius: calc(21 * 100vw / 1440);
+  font-size: calc(18 * 100vw / 1440);
+  font-weight: bold;
+  line-height: calc(22 * 100vw / 1440);
+  color: white;
+  background-color: black;
+  margin-bottom: calc(86 * 100vw / 1440);
+  cursor: pointer;
+}
+.contacts__social {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: calc(45 * 100vw / 1440);
+}
+.contacts__text-small {
+  font-size: calc(14 * 100vw / 1440);
+  line-height: calc(17 * 100vw / 1440);
+  color: #828282;
 }

@@ -86,38 +86,124 @@ let app = new Vue({
         },
         text: {
           eng: "I work in such programs as",
-          rus: "Я работаю в таких программаъ как"
+          rus: "Я работаю в следующих программах"
         },
-        skill1: {
+        list: [{
           cover: "img/skills/item__cover-1.svg",
           title: "Adobe Photoshop",
-          rating: 5
+          rating: 4
         },
-        skill2: {
+        {
           cover: "img/skills/item__cover-2.svg",
           title: "Adobe Illustrator",
-          rating: 5
+          rating: 3
         },
-        skill3: {
+        {
           cover: "img/skills/item__cover-3.svg",
           title: "Adobe After Effects",
-          rating: 5
+          rating: 4
         },
-        skill4: {
+        {
           cover: "img/skills/item__cover-4.svg",
           title: "Figma",
-          rating: 5
+          rating: 4
+        }],
+      },
+      portfolio: {
+        title: {
+          eng: "Portfolio",
+          rus: "Портфолио"
+        },
+        cards: [
+          {
+            cover: "img/portfolio/card__cover-1.jpg",
+            link: {
+              eng: "Online fashion store - Homepage",
+              rus: "Онлайн магазин одежды - Главная страница"
+            }
+          },
+          {
+            cover: "img/portfolio/card__cover-2.jpg",
+            link: {
+              eng: "Reebok Store - Concept",
+              rus: "Магазин Reebok - концепт"
+            }
+          },
+          {
+            cover: "img/portfolio/card__cover-3.jpg",
+            link: {
+              eng: "Braun Landing Page - Concept",
+              rus: "Лэндинг Braun - концепт"
+            }
+          },
+
+        ]
+      },
+      contacts: {
+        title: {
+          eng: "Contacts",
+          rus: "Контакты"
+        },
+        text: {
+          eng: "Want to know more or just chat? You are welcome!",
+          rus: "Хочешь узнать больше или просто пообщаться? Добро пожаловать!"
+        },
+        button: {
+          eng: "Send message",
+          rus: "Отправить сообщение"
+        },
+        social: [
+          {
+            icon: "img/contacts/item__cover-1.svg",
+            link: "#"
+          },
+          {
+            icon: "img/contacts/item__cover-2.svg",
+            link: "#"
+          },
+          {
+            icon: "img/contacts/item__cover-3.svg",
+            link: "#"
+          },
+          {
+            icon: "img/contacts/item__cover-4.svg",
+            link: "#"
+          },
+        ],
+        subtext: {
+          eng: "Like me on LinkedIn, Instagram, Behance, Dribble",
+          rus: "Поставь мне лайк в LinkedIn, Instagram, Behance, Dribble"
         }
       }
-
     },
-    computed: {},
+    computed: {
+      skillsRating() {
+        let result = [];
+        for (let i = 0; i < this.skills.list.length; i++) {
+          result.push(this.getStars(this.skills.list[i].rating));
+        }
+        return result;
+      }
+    },
     methods: {
       changeToEng() {
         this.language = "eng";
       },
       changeToRus() {
         this.language = "rus";
+      },
+      getStars(count) {
+        let result = [];
+        for (let i = 0; i < 5; i++){
+
+          if (i < count) {
+            result.push("img/skills/item__star-black.svg");
+          }
+          else {
+            result.push("img/skills/item__star-gray.svg");
+          }
+        }
+        return result;
       }
     }
 })

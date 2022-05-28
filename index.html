@@ -47,8 +47,8 @@
           </div>
         </section>
         <section class="about">
+          <a class="anchor" name="about"></a>
           <div class="about__container">
-            <a name="about"></a>
             <h2 class="about__title title">{{ about.title[language] }}</h2>
             <div class="about__text text">
               <div class="text__container">
@@ -60,60 +60,106 @@
           </div>
         </section>
         <section class="skills">
+          <a name="skills"></a>
           <div class="skills__container">
             <h2 class="skills__title title">{{ skills.title[language] }}</h2>
             <p class="skills__text text">{{ skills.text[language] }}</p>
             <div class="skills__content">
               <div class="skills__skill skill">
-                <img :src="skills.skill1.cover" alt="" class="skill__cover">
-                <p class="skill__title">{{ skills.skill1.title }}</p>
+                <img :src="skills.list[0].cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.list[0].title }}</p>
                 <div class="skill__rating rating">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img :src="skillsRating[0][0]" alt="" class="rating__star">
+                  <img :src="skillsRating[0][1]" alt="" class="rating__star">
+                  <img :src="skillsRating[0][2]" alt="" class="rating__star">
+                  <img :src="skillsRating[0][3]" alt="" class="rating__star">
+                  <img :src="skillsRating[0][4]" alt="" class="rating__star">
                 </div>
               </div>
               <div class="skills__skill skill">
-                <img :src="skills.skill2.cover" alt="" class="skill__cover">
-                <p class="skill__title">{{ skills.skill2.title }}</p>
+                <img :src="skills.list[1].cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.list[1].title }}</p>
                 <div class="skill__rating rating">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img :src="skillsRating[1][0]" alt="" class="rating__star">
+                  <img :src="skillsRating[1][1]" alt="" class="rating__star">
+                  <img :src="skillsRating[1][2]" alt="" class="rating__star">
+                  <img :src="skillsRating[1][3]" alt="" class="rating__star">
+                  <img :src="skillsRating[1][4]" alt="" class="rating__star">
                 </div>
               </div>
               <div class="skills__skill skill">
-                <img :src="skills.skill3.cover" alt="" class="skill__cover">
-                <p class="skill__title">{{ skills.skill3.title }}</p>
+                <img :src="skills.list[2].cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.list[2].title }}</p>
                 <div class="skill__rating rating">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img :src="skillsRating[2][0]" alt="" class="rating__star">
+                  <img :src="skillsRating[2][1]" alt="" class="rating__star">
+                  <img :src="skillsRating[2][2]" alt="" class="rating__star">
+                  <img :src="skillsRating[2][3]" alt="" class="rating__star">
+                  <img :src="skillsRating[2][4]" alt="" class="rating__star">
                 </div>
               </div>
               <div class="skills__skill skill">
-                <img :src="skills.skill4.cover" alt="" class="skill__cover">
-                <p class="skill__title">{{ skills.skill4.title }}</p>
+                <img :src="skills.list[3].cover" alt="" class="skill__cover">
+                <p class="skill__title">{{ skills.list[3].title }}</p>
                 <div class="skill__rating rating">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
-                  <img src="img/skills/item__star-black.svg" alt="" class="rating__star">
+                  <img :src="skillsRating[3][0]" alt="" class="rating__star">
+                  <img :src="skillsRating[3][1]" alt="" class="rating__star">
+                  <img :src="skillsRating[3][2]" alt="" class="rating__star">
+                  <img :src="skillsRating[3][3]" alt="" class="rating__star">
+                  <img :src="skillsRating[3][4]" alt="" class="rating__star">
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <section class="portfolio">
+          <a name="portfolio"></a>
+          <div class="portfolio__container">
+            <div class="portfolio__title title">{{ portfolio.title[language] }}</div>
+            <div class="portfolio__card card">
+              <img :src="portfolio.cards[0].cover" alt="" class="card__cover">
+              <a href="#" class="card__link">{{ portfolio.cards[0].link[language] }}</a>
+            </div>
+            <div class="portfolio__card card">
+              <img :src="portfolio.cards[1].cover" alt="" class="card__cover">
+              <a href="#" class="card__link">{{ portfolio.cards[1].link[language] }}</a>
+            </div>
+            <div class="portfolio__card card">
+              <img :src="portfolio.cards[2].cover" alt="" class="card__cover">
+              <a href="#" class="card__link">{{ portfolio.cards[2].link[language] }}</a>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer">
-        Footer
+      <footer class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title title">{{ contacts.title[language] }}</h2>
+          <p class="contacts__text text">{{ contacts.text[language] }}</p>
+          <button class="contacts__button">{{ contacts.button[language] }}</button>
+          <div class="contacts__social social">
+            <div class="social__item">
+              <a :href="contacts.social[0].link">
+                <img :src="contacts.social[0].icon" alt="">
+              </a>
+            </div>
+            <div class="social__item">
+              <a :href="contacts.social[1].link">
+                <img :src="contacts.social[1].icon" alt="">
+              </a>
+            </div>
+            <div class="social__item">
+              <a :href="contacts.social[2].link">
+                <img :src="contacts.social[2].icon" alt="">
+              </a>
+            </div>
+            <div class="social__item">
+              <a :href="contacts.social[3].link">
+                <img :src="contacts.social[3].icon" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="contacts__text-small text">{{ contacts.subtext[language] }}</p>
+        </div>
       </footer>
     </div>
   </div>
