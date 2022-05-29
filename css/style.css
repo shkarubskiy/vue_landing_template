@@ -111,7 +111,7 @@ html, body {
 }
 .about__container {
   text-align: center;
-  padding: calc(120 * 100vw / 1440) calc(495 * 100vw / 1440) calc(110 * 100vw / 1440);
+  padding: calc(120 * 100vw / 1440) calc(490 * 100vw / 1440) calc(110 * 100vw / 1440);
   width: 100%;
   margin: 0 auto;
 }
@@ -142,7 +142,7 @@ html, body {
   justify-content: space-between;
 }
 .skill {
-  width: calc(206 * 100vw / 1440);
+  width: 22%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,7 +207,10 @@ html, body {
   padding-bottom: calc(20 * 100vw / 1440);
 }
 .contacts__text {
-  padding: 0 calc(30 * 100vw / 1440) calc(30 * 100vw / 1440);
+  padding-bottom: calc(30 * 100vw / 1440);
+}
+.contacts__container .contacts__text:first-child {
+  padding-bottom: 0;
 }
 .contacts__button {
   height: calc(42 * 100vw / 1440);

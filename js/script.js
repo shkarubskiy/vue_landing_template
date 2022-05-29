@@ -35,16 +35,15 @@ let app = new Vue({
           eng: "Denis Novik",
           rus: "Денис Новик"
         },
-        text: {
-          first: {
-            eng: "UX|UI designer",
-            rus: "Дизайнер UX|UI"
-          },
-          second: {
-            eng: "24 years old, Minsk",
-            rus: "24 года, Минск"
-          }
+        text:
+          [{
+          eng: "UX|UI designer",
+          rus: "Дизайнер UX|UI"
         },
+          {
+          eng: "24 years old, Minsk",
+          rus: "24 года, Минск"
+        }],
         cover: "img/intro/cover.png"
       },
       about: {
@@ -52,20 +51,19 @@ let app = new Vue({
           eng: "About me",
           rus: "Обо мне"
         },
-        text: {
-          first: {
-            eng: "Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.",
-            rus: "Привет, я Денис — дизайнер UX/UI из Минска. Интересуюсь дизайном и всем, что с ним связано.Готов реализовывать отличные проекты с замечательными людьми."
-          },
-          second: {
-            eng: "I'm studying at courses «Web and mobile design interfaces» in IT-Academy.",
-            rus: "Я учусь на курсе «Дизайн мобильных и Web интерфейсов» в IT-Академии."
-          },
-          third: {
-            eng: "Ready to implement excellent projects with wonderful people.",
-            rus: "Готов реализовывать отличные проекты с замечательными людьми."
-          }
-        }
+        text:
+          [{
+          eng: "Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.",
+          rus: "Привет, я Денис — дизайнер UX/UI из Минска. Интересуюсь дизайном и всем, что с ним связано.Готов реализовывать отличные проекты с замечательными людьми."
+        },
+          {
+          eng: "I'm studying at courses «Web and mobile design interfaces» in IT-Academy.",
+          rus: "Я учусь на курсе «Дизайн мобильных и Web интерфейсов» в IT-Академии."
+        },
+          {
+          eng: "Ready to implement excellent projects with wonderful people.",
+          rus: "Готов реализовывать отличные проекты с замечательными людьми."
+        }],
       },
       skills: {
         title: {
@@ -76,22 +74,23 @@ let app = new Vue({
           eng: "I work in such programs as",
           rus: "Я работаю в следующих программах"
         },
-        list: [{
+        list:
+          [{
           cover: "img/skills/item__cover-1.svg",
           title: "Adobe Photoshop",
           rating: 4
         },
-        {
+          {
           cover: "img/skills/item__cover-2.svg",
           title: "Adobe Illustrator",
           rating: 3
         },
-        {
+          {
           cover: "img/skills/item__cover-3.svg",
           title: "Adobe After Effects",
           rating: 4
         },
-        {
+          {
           cover: "img/skills/item__cover-4.svg",
           title: "Figma",
           rating: 4
@@ -132,10 +131,15 @@ let app = new Vue({
           eng: "Contacts",
           rus: "Контакты"
         },
-        text: {
-          eng: "Want to know more or just chat? You are welcome!",
-          rus: "Хочешь узнать больше или просто пообщаться? Добро пожаловать!"
+        text:
+          [{
+          eng: "Want to know more or just chat?",
+          rus: "Хочешь узнать больше или просто пообщаться?"
         },
+          {
+          eng: "You are welcome!",
+          rus: "Добро пожаловать!"
+        }],
         button: {
           eng: "Send message",
           rus: "Отправить сообщение"
@@ -162,15 +166,6 @@ let app = new Vue({
           eng: "Like me on LinkedIn, Instagram, Behance, Dribble",
           rus: "Поставь мне лайк в LinkedIn, Instagram, Behance, Dribble"
         }
-      }
-    },
-    computed: {
-      skillsRating() {
-        let result = [];
-        for (let i = 0; i < this.skills.list.length; i++) {
-          result.push(this.getStars(this.skills.list[i].rating));
-        }
-        return result;
       }
     },
     methods: {
