@@ -77,17 +77,9 @@
           <a name="portfolio"></a>
           <div class="portfolio__container">
             <div class="portfolio__title title">{{ portfolio.title[language] }}</div>
-            <div class="portfolio__card card">
-              <img :src="portfolio.cards[0].cover" alt="" class="card__cover">
-              <a href="#" class="card__link">{{ portfolio.cards[0].link[language] }}</a>
-            </div>
-            <div class="portfolio__card card">
-              <img :src="portfolio.cards[1].cover" alt="" class="card__cover">
-              <a href="#" class="card__link">{{ portfolio.cards[1].link[language] }}</a>
-            </div>
-            <div class="portfolio__card card">
-              <img :src="portfolio.cards[2].cover" alt="" class="card__cover">
-              <a href="#" class="card__link">{{ portfolio.cards[2].link[language] }}</a>
+            <div v-for="card in portfolio.cards" class="portfolio__card card">
+              <img :src="card.cover" alt="" class="card__cover">
+              <a href="#" class="card__link">{{ card.link[language] }}</a>
             </div>
           </div>
         </section>
@@ -127,8 +119,6 @@
       </footer>
     </div>
   </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
-
   <script src="js/script.js"></script>
 </body>
 </html>
