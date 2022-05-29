@@ -169,22 +169,14 @@ const app = Vue.createApp({
     }
   },
   methods: {
-    changeToEng() {
-      this.language = "eng";
-    },
-    changeToRus() {
-      this.language = "rus";
+    changeLanguage(language) {
+      this.language = language;
     },
     getStars(count) {
       let result = [];
       for (let i = 0; i < 5; i++){
-
-        if (i < count) {
-          result.push("img/skills/item__star-black.svg");
-        }
-        else {
-          result.push("img/skills/item__star-gray.svg");
-        }
+        if (i < count) result.push("img/skills/item__star-black.svg");
+        else result.push("img/skills/item__star-gray.svg");
       }
       return result;
     }
