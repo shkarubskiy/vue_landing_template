@@ -1,7 +1,6 @@
-
-let app = new Vue({
-    el: '#app',
-    data: {
+const app = Vue.createApp({
+  data() {
+    return {
       language: "eng",
       header: {
         home: {
@@ -167,26 +166,28 @@ let app = new Vue({
           rus: "Поставь мне лайк в LinkedIn, Instagram, Behance, Dribble"
         }
       }
-    },
-    methods: {
-      changeToEng() {
-        this.language = "eng";
-      },
-      changeToRus() {
-        this.language = "rus";
-      },
-      getStars(count) {
-        let result = [];
-        for (let i = 0; i < 5; i++){
-
-          if (i < count) {
-            result.push("img/skills/item__star-black.svg");
-          }
-          else {
-            result.push("img/skills/item__star-gray.svg");
-          }
-        }
-        return result;
-      }
     }
-})
+  },
+  methods: {
+    changeToEng() {
+      this.language = "eng";
+    },
+    changeToRus() {
+      this.language = "rus";
+    },
+    getStars(count) {
+      let result = [];
+      for (let i = 0; i < 5; i++){
+
+        if (i < count) {
+          result.push("img/skills/item__star-black.svg");
+        }
+        else {
+          result.push("img/skills/item__star-gray.svg");
+        }
+      }
+      return result;
+    }
+  }
+});
+app.mount("#app");
